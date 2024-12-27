@@ -1,4 +1,8 @@
 #uploaded to github on 11 DEC 2024
+#version 1_0
+#created by Aryan Pokhrel
+#on 28/Dec/2024 i made small changes to this file including the comments in lines 2 and 3 and i added line 44
+
 from tkinter import *
 import math
 from PIL import Image, ImageTk
@@ -36,6 +40,7 @@ class window:
         self.start_position = start_position
         
         self.window = Canvas(self.root, bg = self.colour, width = self.root.winfo_screenwidth(), height = self.root.winfo_screenheight())
+        self.Super_G_version = "Version 1_0"
     #shows the user the application
     def display(self):
         self.root.title("{}".format(self.title))
