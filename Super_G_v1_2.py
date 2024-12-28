@@ -1,6 +1,9 @@
 #Version 1_2
 #Created by Aryan Pokhrel
 #Uploaded on 28/Dec/2024
+
+#EDIT on the 29/DEC/2024: there was a bug with the fps and timer function for the window class which i fixed
+
 from tkinter import *
 import math, time
 from PIL import Image, ImageTk
@@ -76,12 +79,12 @@ class window:
     
     #waits for a few seconds to execute some function
     def timer(self, seconds, function):
-        self.root.after(1000*seconds, function)
+        self.root.after(int(1000*seconds), function)
     
     #a single frame in this instance being one execution of the function
     #repeats a single function fps amount of times in a second
     def fps(self, fps, function):
-        self.root.after(1000/fps, function)
+        self.root.after(int(1000/fps), function)
 
 #used to create polygons on the screen, the points given are 2d polygons
 class polygon:
